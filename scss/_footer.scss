@@ -1,0 +1,13 @@
+$color: #808080;
+$bg: #414141;
+
+.footer {
+    background-color: $bg;
+    &__title {
+        padding: 8px 0;
+        line-height: 1.2;
+        text-align: center;
+        color: $color;
+    }
+}
+
