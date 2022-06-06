@@ -4,6 +4,8 @@ $bp1: 1024px;
 $bp2: 768px;
 $bp3: 480px;
 
+$services: #ECECEC;
+
 body {
     font-family: "Segoe WP";
 }
@@ -70,5 +72,68 @@ $main: rgb(103, 103, 103);
         }
     }
 }
+
+.services {
+    padding: 210px 0 75px;
+    background-color: $services;
+    color: #7E7C7C;
+    line-height: 1.2;
+    text-align: center;
+    &__container {
+        max-width: 735px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    &__title {
+        font-size: 26px;
+        margin: 0 0 15px 0;
+        @media (max-width: $bp3) {
+            font-size: 22px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        @media (max-width: $bp3) {
+            font-size: 20px;
+        }
+    }
+
+    &__services {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px 0 0 0;
+        @media (max-width: $bp2) {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+        }
+    }
+}
+.service {
+    &__img {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 auto 20px;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 130px;
+            max-height: 130px;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+    }
+}
+
 
 @import "header"
